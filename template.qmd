@@ -1,14 +1,14 @@
 ---
-title: Untitled
+title: "Untitled"
 date: 01/01/0001
 date-modified: last-modified
-author: "Andrej Sokolič"
+author: ["Andrej Sokolič", "test"]
 slug: ""
 tags: []
 excerpt: 
-git-repo: https://www.github.com/sokolicA
-thumbnail: false
+git-repo: ""
+thumbnail: ""
+static-dir: "static"
 format:
   blog-post-html: default
 ---
-
