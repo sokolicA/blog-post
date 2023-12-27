@@ -11,11 +11,20 @@ This will install the extension and create an example qmd file that you can use 
 
 ## Using
 
-*TODO*: Describe how to use your format.
+Format used for posting in my blog.
 
 ## Format Options
 
-*TODO*: If your format has options that can be set via document metadata, describe them.
+- *title*: Post title.
+- *date*: Date originally posted.
+- *date-modified*: Date last modified.
+- *author*: Author(s) of the post. Multiple authors can be provided inside a list ([]).
+- *slug*: Post slug.
+- *excerpt*: Short description of the post.
+- *static-dir*: Directory containing static files.
+- *thumbnail*: Name of the image to use as thumbnail. Should be located inside *static-dir*.
+- *tags*: List of tags. 
+- *git-repo*: Remote repository with code used to generate the post.
 
 ## Example
 
