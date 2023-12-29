@@ -2,7 +2,7 @@
 title: "Untitled"
 date: 01/01/0001
 date-modified: last-modified
-author: ["Andrej Sokolič", "test"]
+author: "Andrej Sokolič"
 slug: ""
 tags: []
 excerpt: 

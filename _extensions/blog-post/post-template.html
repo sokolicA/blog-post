@@ -2,6 +2,7 @@
     <meta name="title" content="$title$" />
     <meta name="date" content="$date$" />
     <meta name="slug" content="$slug$" />
+    <meta name="git-repo" content="$git-repo$" />
     $for(tags)$
         <meta name="tag" content="$tags$" />
     $endfor$
@@ -40,7 +41,7 @@
 </head>
 
 <body>
-    <meta name="django" content="{% block before_body %}">
+    <meta name="django" content="{% block body_before_content %}">
     $if(toc)$
         <nav id="TOC" class="TOC" role="doc-toc">
             $if(toc-title)$
@@ -49,7 +50,7 @@
             $table-of-contents$
       </nav>
     $endif$
-    <meta name="django" content="{% endblock before_body %}">
+    <meta name="django" content="{% endblock body_before_content %}">
     
     <meta name="django" content="{% block body_content %}">
     $body$
