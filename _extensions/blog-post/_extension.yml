@@ -7,7 +7,9 @@ contributes:
     html:
       template: post-template.html
       toc: true
-      html-math-method: katex
+      html-math-method: 
+        method: mathjax
+        url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
       theme: none
       minimal: true
       echo: false
