@@ -1,93 +1,84 @@
 <head>
-    <meta name="title" content="$title$" />
-    <meta name="author_username" content="$author_username$" />
-    <meta name="date" content="$date$" />
-    <meta name="slug" content="$slug$" />
-    <meta name="git-repo" content="$git-repo$" />
-    $for(tags)$
-        <meta name="tag" content="$tags$" />
-    $endfor$
-    <meta name="excerpt" content="$excerpt$" />
-    <meta name="date-modified" content="$date-modified$" />
-    <meta name="static-dir" content="$static-dir$" />
-    
-    <meta name="django" content="{% load static %}">
-    <meta name="django" content="{% block page_title %} $pagetitle$ {% endblock page_title %}">
-    <meta name="django" content="{% block head_other %}">
-
-    $for(author-meta)$
-        <meta name="author" content="$author-meta$" />
-    $endfor$
-    $if(date-meta)$
-        <meta name="dcterms.date" content="$date-meta$" />
-    $endif$
-    $if(keywords)$
-        <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
-    $endif$
-    $if(description-meta)$
-        <meta name="description" content="$description-meta$" />
-    $endif$
-    $for(header-includes)$
-        $header-includes$
-    $endfor$
-
-    $if(math)$
-    $if(mathjax)$
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    $endif$
-      $math$
-    
-    <script type="text/javascript">
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
-    window.Quarto = {
-      typesetMath
-    };
-    </script>
-    $endif$
-    <meta name="django" content="{% endblock head_other %}">
-    
-    
-    
-    <meta name="django" content="{% block head_css %}">
-    $for(css)$
-        <link rel="stylesheet" href="$css$" />
-    $endfor$
-    <meta name="django" content="{% endblock head_css %}">
+<meta name="title" content="$title$" />
+<meta name="author_username" content="$author_username$" />
+<meta name="date" content="$date$" />
+<meta name="slug" content="$slug$" />
+<meta name="git-repo" content="$git-repo$" />
+$for(tags)$
+<meta name="tag" content="$tags$" />
+$endfor$
+<meta name="excerpt" content="$excerpt$" />
+<meta name="date-modified" content="$date-modified$" />
+<meta name="static-dir" content="$static-dir$" />
+<meta name="django" content="{% load static %}">
+<meta name="django" content="{% block page_title %} $pagetitle$ {% endblock page_title %}">
+<meta name="django" content="{% block head_other %}">
+$for(author-meta)$
+<meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+<meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+<meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+<meta name="description" content="$description-meta$" />
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
+$if(math)$
+$if(mathjax)$
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+$endif$
+$math$
+<script type="text/javascript">
+const typesetMath = (el) => {
+if (window.MathJax) {
+// MathJax Typeset
+window.MathJax.typeset([el]);
+} else if (window.katex) {
+// KaTeX Render
+var mathElements = el.getElementsByClassName("math");
+var macros = [];
+for (var i = 0; i < mathElements.length; i++) {
+var texText = mathElements[i].firstChild;
+if (mathElements[i].tagName == "SPAN") {
+window.katex.render(texText.data, mathElements[i], {
+displayMode: mathElements[i].classList.contains('display'),
+throwOnError: false,
+macros: macros,
+fleqn: false
+});
+}
+}
+}
+}
+window.Quarto = {
+typesetMath
+};
+</script>
+$endif$
+<meta name="django" content="{% endblock head_other %}">
+<meta name="django" content="{% block head_css %}">
+$for(css)$
+<link rel="stylesheet" href="$css$" />
+$endfor$
+<meta name="django" content="{% endblock head_css %}">
 </head>
-
 <body>
-    <meta name="django" content="{% block body_before_content %}">
-    $if(toc)$
-        <nav id="TOC" class="TOC" role="doc-toc">
-            $if(toc-title)$
-                <h2 id="toc-title">$toc-title$</h2>
-            $endif$ 
-            $table-of-contents$
-      </nav>
-    $endif$
-    <meta name="django" content="{% endblock body_before_content %}">
-    
-    <meta name="django" content="{% block body_content %}">
-    $body$
-    <meta name="django" content="{% endblock body_content %}">
+<meta name="django" content="{% block body_before_content %}">
+$if(toc)$
+<nav id="TOC" class="TOC" role="doc-toc">
+$if(toc-title)$
+<h2 id="toc-title">$toc-title$</h2>
+$endif$ 
+$table-of-contents$
+</nav>
+$endif$
+<meta name="django" content="{% endblock body_before_content %}">
+<meta name="django" content="{% block body_content %}">
+$body$
+<meta name="django" content="{% endblock body_content %}">
 </body>
