@@ -61,11 +61,13 @@ typesetMath
 </script>
 $endif$
 <meta name="django" content="{% endblock head_other %}">
+$if(css)$
 <meta name="django" content="{% block head_css %}">
 $for(css)$
 <link rel="stylesheet" href="$css$" />
 $endfor$
 <meta name="django" content="{% endblock head_css %}">
+$endif$
 </head>
 <body>
 <meta name="django" content="{% block body_before_content %}">
