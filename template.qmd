@@ -3,7 +3,7 @@ title: "Untitled"
 date: 01/01/0001
 date-modified: last-modified
 author: "Andrej Sokolič"
-author_username: "as"
+author-username: "as"
 slug: ""
 tags: []
 excerpt: 

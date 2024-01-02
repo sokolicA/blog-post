@@ -19,6 +19,7 @@ Format used for posting in my blog.
 - *date*: Date originally posted.
 - *date-modified*: Date last modified.
 - *author*: Author(s) of the post. Multiple authors can be provided inside a list ([]).
+- *author-username*: Author's username.
 - *slug*: Post slug.
 - *excerpt*: Short description of the post.
 - *static-dir*: Directory containing static files.
