@@ -70,7 +70,7 @@ $endfor$
 $endif$
 </head>
 <body>
-<meta name="django" content="{% block body_before_content %}">
+<meta name="django" content="{% block body_header %}">
 <div class="post-header">
 {% include "blog/includes/post-detail-head.html" %}
 </div>
@@ -82,7 +82,7 @@ $endif$
 $table-of-contents$
 </nav>
 $endif$
-<meta name="django" content="{% endblock body_before_content %}">
+<meta name="django" content="{% endblock body_header %}">
 <meta name="django" content="{% block body_content %}">
 $body$
 <meta name="django" content="{% endblock body_content %}">
