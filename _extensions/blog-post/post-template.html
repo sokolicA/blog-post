@@ -70,8 +70,11 @@ $endfor$
 $endif$
 </head>
 <body>
-<meta name="django" content="{% block body_header %}">
-<div class="post-header">
+
+<meta name="django" content="{% block body_content %}">
+<div class="container">
+<article class="post">
+<div class="post__header">
 {% include "blog/includes/post-detail-head.html" %}
 </div>
 $if(toc)$
@@ -82,8 +85,8 @@ $endif$
 $table-of-contents$
 </nav>
 $endif$
-<meta name="django" content="{% endblock body_header %}">
-<meta name="django" content="{% block body_content %}">
 $body$
+</article>
+</div>
 <meta name="django" content="{% endblock body_content %}">
 </body>
