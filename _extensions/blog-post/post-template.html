@@ -71,6 +71,9 @@ $endif$
 </head>
 <body>
 <meta name="django" content="{% block body_before_content %}">
+<div class="post-header">
+{% include "blog/includes/post-detail-head.html" %}
+</div>
 $if(toc)$
 <nav id="TOC" class="TOC" role="doc-toc">
 $if(toc-title)$
